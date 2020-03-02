@@ -1,0 +1,48 @@
+<h1>Repaso de condicionales</h1>
+
+<h3>If ng-container y evento click en boton</h3>
+
+<img src="../../../assets/ng-container.JPG">
+
+<p>En este caso vemos la condicion *ngIf la cual nos dice que si la variable <b>isLogged</b> es <b>false</b> se 
+    mostrará el contenido del ng-container, de lo contrario nos redirige a un ng-template llamado logueado.
+    Al hacer click en el button de iniciar sesion, la variable <b>isLogged</b> pasa a tener un valor <b>true</b>.
+</p>
+
+<p>La variable <b>isLogged</b> se declara en el <b>.ts</b> de la siguiente forma: <b>isLogged: boolean = false</b></p>
+
+<h3>ng-template</h3>
+
+<p>Encierra un conjunto de elementos y se puede identificar con el simbolo <b>"#"</b></p>
+
+<img src="../../../assets/ng-template.JPG">
+
+<h3>If en un boton</h3>
+
+<p>Se puede usar un if en un boton, como para hacer que se muestre dependiendo de una variable utilizando 
+    <b>*ngIf</b>en este caso el boton se muestra cuando la variable <b>nivel</b> sea mayor o igual a <b>10</b>.
+la variable nivel se declara en el .ts de la siguiente forma: <b>nivel: number = 5</b></p>
+
+<img src="../../../assets/ngIf.JPG">
+
+<h1>Ejemplos</h1>
+
+<ng-container *ngIf="!isLogged; else logueado">
+    <button (click)="isLogged = true">Iniciar Sesion</button>
+    <button>Registrarse</button>
+</ng-container>
+
+<ng-template #logueado>
+    <h4>Felicidades, estas logueado</h4>
+    <button (click)="isLogged = false">Cerrar Sesion</button>
+</ng-template>
+
+<div class="container">
+    <h4>Boton que aparece con una condicion</h4>
+
+    <button (click)="nivel = nivel + 1">Sumar Nivel</button>
+    <button (click)="nivel = nivel - 1">Restar Nivel</button> <b>{{ nivel }}</b>
+
+    <button *ngIf="nivel >= 10">Boton Dinamico</button>
+</div>
+

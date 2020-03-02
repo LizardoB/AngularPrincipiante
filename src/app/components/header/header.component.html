@@ -1,0 +1,25 @@
+<!--cambiar con el evento click-->
+
+<div class="container">
+    {{ nombre }}
+
+    <button (click)="nombre='Jorge'">Cambiar</button>
+</div>
+
+
+<!--cambiar con el evento click y funcion-->
+
+<div class="container">
+    {{ nombreFuncion }}
+
+    <button (click)="cambiarNombre()">Cambiar</button>
+</div>
+
+<!--array-->
+<div class="container">
+    <ul>
+        <li *ngFor="let numero of arr">{{ numero }}</li>
+    </ul>
+
+    <button (click)="agregarNumero()">Add</button>
+</div>
