@@ -18,17 +18,17 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/PrimerProgramaAngular",
-            "index": "src/docs/index.html",
-            "main": "src/docs/main.ts",
-            "polyfills": "src/docs/polyfills.ts",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": [
-              "src/docs/favicon.ico",
+              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/docs/styles.sass"
+              "src/styles.sass"
             ],
             "scripts": []
           },
@@ -84,16 +84,16 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/docs/test.ts",
-            "polyfills": "src/docs/polyfills.ts",
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/docs/favicon.ico",
+              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/docs/styles.sass"
+              "src/styles.sass"
             ],
             "scripts": []
           }
